@@ -28,10 +28,10 @@ const Page: Component = () => {
 }
 
 const Placeholder: Component = () => (
-    <article>
-      Please navigate somewhere using the links above.
-    </article>
-  )
+  <article>
+    Please navigate somewhere using the links above.
+  </article>
+)
 
 const Main: Component = () => (
   <Router>
