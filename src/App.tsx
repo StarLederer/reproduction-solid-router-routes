@@ -1,5 +1,5 @@
 import type { Component } from 'solid-js'
-import { Route, Router, Routes, useNavigate, useParams, A, Outlet } from '@solidjs/router'
+import { Route, Router, Routes, useParams, A, Outlet } from '@solidjs/router'
 
 const Layout: Component = () => (
   <>
