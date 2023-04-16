@@ -27,16 +27,14 @@ const Page: Component = () => {
   )
 }
 
-const Main: Component = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="" component={Layout} >
-          <Route path=":page" component={Page} />
-        </Route>
-      </Routes>
-    </Router>
-  )
-}
+const Main: Component = () => (
+  <Router>
+    <Routes>
+      <Route path="" component={Layout} >
+        <Route path=":page" component={Page} />
+      </Route>
+    </Routes>
+  </Router>
+)
 
 export default Main
