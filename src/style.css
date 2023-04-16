@@ -1,0 +1,146 @@
+* {
+  cursor: inherit;
+}
+
+:root {
+  font-family: 'Assistant', sans-serif;
+  cursor: default;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  @apply size-i-s.2 size-b-s.2;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-fg-5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-fg-4 rounded-full;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-fg-3;
+}
+
+:root {
+  @apply accent-accent;
+}
+
+button {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  block-size: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.animate-in,
+.animate-out {
+  animation-fill-mode: forwards;
+}
+
+.animate-in {
+  animation-name: in;
+}
+
+.animate-out {
+  animation-name: out;
+}
+
+pre,
+.font-mono {
+  font-family: 'Cascadia Mono', monospace;
+}
+
+pre {
+  cursor: text;
+  @apply leading-[$($s)rem] text-s.8;
+}
+
+ul[title]::before {
+  content: attr(title)
+}
+
+pre.css,
+pre.js,
+.hljs-comment,
+.hljs-tag {
+  @apply text-fg-2;
+}
+
+.hljs-keyword,
+.hljs-variable,
+.hljs-title,
+.hljs-selector-class,
+.hljs-name {
+  @apply text-accent;
+}
+
+.hljs-property,
+.hljs-attribute,
+.hljs-attr {
+  @apply text-fg-1;
+}
+
+.hljs-string {
+  @apply text-accent hue-rotate-s.2;
+}
+
+.hljs-number {
+  @apply text-accent;
+}
+
+.hljs-comment {
+  @apply text-fg-3;
+}
+
+
+@keyframes in {
+  from {
+    transform: scale(1.025);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.025);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(0.975);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(0.975);
+    opacity: 0;
+  }
+}
