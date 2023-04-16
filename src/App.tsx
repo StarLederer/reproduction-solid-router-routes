@@ -27,10 +27,17 @@ const Page: Component = () => {
   )
 }
 
+const Placeholder: Component = () => (
+    <article>
+      Please navigate somewhere using the links above.
+    </article>
+  )
+
 const Main: Component = () => (
   <Router>
     <Routes>
       <Route path="" component={Layout} >
+        <Route path="*" component={Placeholder} />
         <Route path=":page" component={Page} />
       </Route>
     </Routes>
