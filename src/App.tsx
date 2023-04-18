@@ -1,5 +1,6 @@
 import type { Component } from 'solid-js'
 import { Route, Router, Routes, useParams, A, Outlet } from '@solidjs/router'
+import { Transition } from 'solid-transition-group'
 
 const Layout: Component = () => (
   <>
@@ -10,7 +11,23 @@ const Layout: Component = () => (
     </nav>
 
     <main>
-      <Outlet />
+      <Transition
+        mode="outin"
+        onEnter={(el, done) => {
+          const a = el.animate([{ opacity: 0 }, { opacity: 1 }], {
+            duration: 600
+          });
+          a.finished.then(done);
+        }}
+        onExit={(el, done) => {
+          const a = el.animate([{ opacity: 1 }, { opacity: 0 }], {
+            duration: 600
+          });
+          a.finished.then(done);
+        }}
+      >
+        <Outlet />
+      </Transition>
     </main>
   </>
 )
