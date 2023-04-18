@@ -17,12 +17,12 @@ const Layout: Component = () => (
 
 
 const Page: Component = () => {
-  const { page } = useParams()
+  const p = useParams()
 
   return (
     <article>
-      <h1>{page}</h1>
-      Hello from {page}
+      <h1>{p.page}</h1>
+      Hello from {p.page}
     </article>
   )
 }
